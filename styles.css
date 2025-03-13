@@ -1,9 +1,15 @@
 body {
-    margin: 20px;
+    /* margin: 20px; */
+    background-color: #4f5d75;
+    /* viewport height ; helps w centering */
+    height: 100vh; 
+    display: grid;
+    place-items: center;
 }
 
 .avatar {
     width: 9.375rem;
+    border-radius: 5px;
 }
 
 /* .blue-border {
@@ -11,10 +17,10 @@ body {
 } */
 
 .card {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 1.25rem;
 
-    /* evenly space around */
+    /* evenly space around elements in card */
     display: flex;
     justify-content: space-around;
     /* gap: 2rem; */
@@ -28,13 +34,29 @@ body {
 
     /* align text */
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     /* color */
     color: #2b2839;
     background-color: #ddebf8;
     border-bottom: 6px solid #d8cefe;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 3px 3px 10px black;
 }
 
+.content {
+    padding-top: 20px;
+ }
 
+.card:hover {
+    animation: tilt-shaking 0.23s;
+    animation-iteration-count: 4;
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
